@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="FlyOutMauiApp.NewPage1"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="NewPage1">
+    <VerticalStackLayout>
+        <Image
+            Aspect="AspectFit"
+            HeightRequest="185"
+            SemanticProperties.Description="dot net bot in a race car number eight"
+            Source="dotnet_bot.png" />
+        <Label
+            HorizontalOptions="Center"
+            Text="Nueva ventana!"
+            VerticalOptions="Center" />
+    </VerticalStackLayout>
+</ContentPage>
