@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="CustomFlyOut.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:CustomFlyOut"
+    xmlns:view="clr-namespace:CustomFlyOut.Views"
+    Title="CustomFlyOut"
+    BackgroundColor="Black"
+    FlyoutIcon="hamburgermenu.jpg"
+    Shell.FlyoutBehavior="Flyout">
+    <Shell.FlyoutBackground>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+            <GradientStop Offset="0.1" Color="#f77be6" />
+            <GradientStop Offset="0.6" Color="#c20fea" />
+            <GradientStop Offset="1.0" Color="#5008f9" />
+        </LinearGradientBrush>
+    </Shell.FlyoutBackground>
+
+    <Shell.FlyoutHeaderTemplate>
+        <DataTemplate>
+            <Grid BackgroundColor="Black" HeightRequest="200">
+                <Image
+                    Aspect="AspectFill"
+                    Opacity="0.9"
+                    Source="abstract0" />
+                <Label
+                    Margin="-75,55,0,0"
+                    FontAttributes="Bold"
+                    FontSize="38"
+                    HorizontalTextAlignment="Center"
+                    Text="Menú"
+                    TextColor="White"
+                    VerticalTextAlignment="Center" />
+            </Grid>
+        </DataTemplate>
+    </Shell.FlyoutHeaderTemplate>
+
+    <FlyoutItem Title="Home" Icon="gitlab.svg">
+        <Tab>
+            <ShellContent ContentTemplate="{DataTemplate local:MainPage}" />
+        </Tab>
+    </FlyoutItem>
+    <FlyoutItem Title="About" Icon="map.svg">
+        <Tab>
+            <ShellContent ContentTemplate="{DataTemplate view:AboutPage}" />
+        </Tab>
+    </FlyoutItem>
+    <FlyoutItem Title="Resource" Icon="arrow.svg">
+        <Tab>
+            <ShellContent ContentTemplate="{DataTemplate view:ResourcePage}" />
+        </Tab>
+    </FlyoutItem>
+    <!--FlyoutItem>
+        <ShellContent
+            Title="Home"
+            ContentTemplate="{DataTemplate local:MainPage}"
+            Icon="arrow.svg"
+            Route="MainPage" />
+        <ShellContent
+            Title="Resources"
+            ContentTemplate="{DataTemplate view:ResourcePage}"
+            Icon="gitlab.svg"
+            Route="ResourcePage" />
+        <ShellContent
+            Title="About"
+            ContentTemplate="{DataTemplate view:AboutPage}"
+            Icon="heartw.svg"
+            Route="AboutPage" />
+
+    </FlyoutItem-->
+
+
+
+</Shell>
